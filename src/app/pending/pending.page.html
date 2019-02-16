@@ -1,10 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Pending</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content padding>
-  <h2>Pending list</h2>
+  <img src="assets/images/pending.png" />
+  <ion-list>
+    <ion-item *ngFor="let item of wishLists"
+              (click)="selectedList(item)">
+      <ion-label>{{ item.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goAddList()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   
 </ion-content>

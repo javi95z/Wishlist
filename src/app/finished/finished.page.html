@@ -1,10 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Finished</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  
+  <img src="assets/images/finished.png" />
 
-<ion-content padding>
-  <h2>Finished list</h2>
+  <ion-list>
+      <ion-item *ngFor="let item of wishLists"
+                (click)="selectedList(item)">
+        <ion-label>{{ item.title }}</ion-label>
+      </ion-item>
+    </ion-list>
 
 </ion-content>
